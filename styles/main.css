@@ -139,42 +139,34 @@ footer {
     border: 2px ridge rgb(7, 7, 7);
   }
 
-  @media (max-width: 800px) {
-    /* Adjust header layout */
+  @media (max-width: 600px) {
     header {
         flex-direction: column;
     }
     header h2 {
         text-align: center;
     }
-
-    /* Make navigation visible and adjust for small screen layout */
     nav {
         display: block; /* Make sure nav is visible */
         flex-basis: 100%; /* Full width of the viewport */
         position: sticky;
         top: 0; /* Stick to the top of the viewport */
+        width: 100%; /* Ensures the nav spans the full width */
     }
-
     nav ul {
         display: flex;
         flex-direction: column; /* Stack nav items vertically */
-        width: 100%; /* Use full width for each nav item */
-        align-items: center; /* Center align the nav items */
+        align-items: flex-start; /* Align items to the left */
+        width: 100%; /* Full width to accommodate smaller screens */
     }
-
     nav a {
         padding: 10px; /* Sufficient padding for touch targets */
-        text-align: center; /* Center the text within nav links */
+        text-align: left; /* Align the text within nav links to the left */
         width: 100%; /* Full width to make each link easy to tap */
     }
-
-    /* Adjust main content area */
     main {
         flex-basis: 100%; /* Use full width of the viewport */
     }
-
-    /* Remove borders from video wrappers on small screens for cleaner look */
     .videowrapper {
         border: none;
     }
