@@ -139,7 +139,7 @@ footer {
     border: 2px ridge rgb(7, 7, 7);
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 800px) {
     /* Adjust header layout */
     header {
         flex-direction: column;
