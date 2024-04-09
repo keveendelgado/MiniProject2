@@ -1,0 +1,158 @@
+.logo {
+    width: auto; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav ul li a:hover {
+    font-size: 20px; /* Larger font size on hover */
+}
+body {
+    font-family: "Russo One", sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: white;
+}
+
+header, footer {
+    width: 100vw;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: rgb(27, 13, 13);
+    color: white;
+    margin-bottom: 2em;
+}
+
+header img {
+    max-width: 150px;
+    padding: 1em;
+}
+
+header h2 {
+    font-size: 250%;
+}
+
+main {
+    flex-basis: 65%;
+}
+nav {
+    flex-basis: 20%; /* Ensure parent container is set to display: flex */
+    width: 100%; /* Full width for smaller screens or specific layouts */
+}
+
+nav ul {
+    position: sticky;
+    top: 50px;
+    list-style: none;
+    width: 90%;
+    margin: auto; /* Centers the menu within 'nav' */
+    padding: 0; /* Resets default padding */
+}
+
+nav li { 
+    margin-bottom: 1em;
+}
+
+nav a {
+    display: block;
+    background-color: rgb(15, 15, 15);
+    color: white;
+    text-decoration: none;
+    padding: 1em 0.5em;
+    border: 2px ridge rgb(67, 24, 24);
+    border-radius: 10px;
+    transition: all ease-in-out 300ms;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Subtle shadow for depth */
+}
+
+nav a:hover {
+    background-color: rgb(251, 246, 246);
+    color: red;
+}
+
+nav input[type="text"] {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid white; /* Stylish minimal border */
+    color: white; /* Ensure good contrast for readability */
+    margin: 10px;
+    padding: 5px;
+}
+
+article {
+    margin-bottom: 2em;
+}
+
+.videowrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0;
+    margin: 0 auto;
+    border: 6px ridge #808080;
+}
+.videowrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+footer {
+    padding: 2em 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(27, 13, 13);
+    color: white;
+}
+
+#cornerBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    padding: 1em 2em;
+    background-color: rgba(255, 0, 0, 0.406);
+    border-radius: 10px;
+    border: rgba(255, 0, 0, 0.406);
+    color: black;
+    font-size: 120%;
+    font-weight: bold;
+    cursor: pointer;
+    transition: ease-in-out;
+  }
+
+  #cornerBtn:hover {
+    background-color: black;
+    color: rgb(71, 21, 121);
+    border: 2px ridge rgb(7, 7, 7);
+  }
+
+@media (max-width: 600px) {
+    nav {
+        display: none;
+    }
+    header{
+        flex-direction: column;
+    }
+    header h2 {
+        text-align: center;
+    }
+    main{
+        flex-basis: 100%;
+    }
+    .videowrapper{
+        border: none;
+    }
+}
